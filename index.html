@@ -860,6 +860,442 @@
     z-index: 0;
   }
 
+  /* ===========================================
+     COMPREHENSIVE RESPONSIVE DESIGN
+     =========================================== */
+
+  /* Extra Small Phones (320px - 480px) */
+  @media (max-width: 480px) {
+    /* Navigation */
+    nav {
+      padding: 16px 20px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .nav-logo {
+      font-size: 20px;
+      order: 1;
+    }
+    .nav-links {
+      gap: 20px;
+      order: 2;
+      width: 100%;
+      justify-content: center;
+      margin-top: 8px;
+    }
+    .nav-links a {
+      font-size: 9px;
+      letter-spacing: 2px;
+    }
+
+    /* Hero Section */
+    .hero-content {
+      padding: 0 20px;
+      text-align: center;
+    }
+    .hero-tag {
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-align: center;
+      justify-content: center;
+    }
+    .hero-tag::before {
+      display: none;
+    }
+    .hero-name {
+      font-size: clamp(36px, 10vw, 60px);
+      text-align: center;
+      line-height: 1.1;
+    }
+    .hero-title {
+      font-size: 12px;
+      text-align: center;
+    }
+    .hero-desc {
+      font-size: 14px;
+      text-align: center;
+      line-height: 1.6;
+      padding: 0 10px;
+    }
+    .hero-ctas {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .btn-primary, .btn-ghost {
+      width: 200px;
+      text-align: center;
+      padding: 12px 24px;
+      font-size: 10px;
+    }
+
+    /* Sections */
+    .section {
+      padding: 48px 20px;
+    }
+    .section-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .section-num {
+      font-size: 40px;
+    }
+    .section-title {
+      font-size: 32px;
+    }
+    .section-eyebrow {
+      font-size: 9px;
+      letter-spacing: 3px;
+    }
+
+    /* About Section */
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .about-text p {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .skills-grid {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .skill-pill {
+      font-size: 10px;
+      padding: 8px 12px;
+    }
+
+    /* Experience Section */
+    .exp-timeline {
+      padding-left: 24px;
+    }
+    .exp-item {
+      margin-bottom: 24px;
+    }
+    .exp-role {
+      font-size: 22px;
+    }
+    .exp-date {
+      font-size: 9px;
+      padding: 3px 8px;
+    }
+    .exp-company {
+      font-size: 10px;
+    }
+    .exp-bullets li {
+      font-size: 13px;
+      line-height: 1.5;
+      padding-left: 16px;
+    }
+
+    /* Projects Section */
+    .projects-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .project-card {
+      padding: 24px;
+    }
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+    }
+    .card-title {
+      font-size: 16px;
+    }
+    .card-desc {
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .tag {
+      font-size: 8px;
+      padding: 3px 8px;
+    }
+    .card-metrics {
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .metric-val {
+      font-size: 24px;
+    }
+    .metric-lbl {
+      font-size: 8px;
+    }
+
+    /* Tech Stack */
+    .tech-orbs {
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .tech-orb {
+      padding: 8px 16px;
+      font-size: 9px;
+    }
+
+    /* Education */
+    .edu-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .edu-card {
+      padding: 20px;
+    }
+    .edu-degree {
+      font-size: 24px;
+    }
+    .edu-field {
+      font-size: 10px;
+    }
+    .edu-school {
+      font-size: 13px;
+    }
+    .edu-gpa {
+      font-size: 20px;
+    }
+    .certs-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .cert-item {
+      padding: 16px;
+    }
+    .cert-icon {
+      width: 36px;
+      height: 36px;
+      font-size: 12px;
+    }
+    .cert-name {
+      font-size: 12px;
+    }
+    .cert-org {
+      font-size: 9px;
+    }
+
+    /* Contact */
+    .contact-headline {
+      font-size: 48px;
+      text-align: center;
+      line-height: 1.1;
+    }
+    .contact-sub {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .contact-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .contact-link {
+      width: 100%;
+      justify-content: center;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+    .contact-link:hover {
+      border-color: var(--primary);
+      background: rgba(0,212,255,0.04);
+    }
+
+    /* Footer */
+    footer {
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+      padding: 20px;
+    }
+    footer span {
+      font-size: 9px;
+    }
+
+    /* Status Bar */
+    .status-bar {
+      bottom: 16px;
+      left: 20px;
+    }
+    .status-text {
+      font-size: 8px;
+    }
+
+    /* Scroll Indicator */
+    .scroll-indicator {
+      bottom: 32px;
+    }
+    .scroll-line {
+      height: 40px;
+    }
+    .scroll-label {
+      font-size: 8px;
+      letter-spacing: 3px;
+    }
+
+    /* Cursor - Hide on mobile */
+    .cursor, .cursor-ring {
+      display: none;
+    }
+    body {
+      cursor: auto;
+    }
+  }
+
+  /* Small Phones (481px - 640px) */
+  @media (min-width: 481px) and (max-width: 640px) {
+    .hero-name {
+      font-size: clamp(48px, 12vw, 80px);
+    }
+    .hero-desc {
+      font-size: 15px;
+    }
+    .section {
+      padding: 56px 24px;
+    }
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+    .edu-grid {
+      grid-template-columns: 1fr;
+    }
+    .certs-grid {
+      grid-template-columns: 1fr;
+    }
+    .skills-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .tech-orbs {
+      gap: 12px;
+    }
+  }
+
+  /* Medium Phones/Tablets (641px - 768px) */
+  @media (min-width: 641px) and (max-width: 768px) {
+    .hero-name {
+      font-size: clamp(56px, 14vw, 100px);
+    }
+    .section {
+      padding: 64px 32px;
+    }
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+    .edu-grid {
+      grid-template-columns: 1fr;
+    }
+    .certs-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .skills-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .tech-orbs {
+      gap: 16px;
+    }
+    .nav-links {
+      gap: 24px;
+    }
+    .hero-content {
+      padding: 0 32px;
+    }
+  }
+
+  /* Large Tablets (769px - 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .section {
+      padding: 72px 40px;
+    }
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .about-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .edu-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .certs-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .skills-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .tech-orbs {
+      gap: 16px;
+    }
+    .hero-content {
+      padding: 0 40px;
+    }
+    .nav-links {
+      gap: 28px;
+    }
+  }
+
+  /* Landscape Phone Fixes */
+  @media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+      height: auto;
+      min-height: 100vh;
+      padding: 80px 0;
+    }
+    .hero-content {
+      padding: 0 20px;
+    }
+    .hero-name {
+      font-size: clamp(32px, 8vw, 48px);
+    }
+    .section {
+      padding: 40px 20px;
+    }
+    .section-title {
+      font-size: 28px;
+    }
+  }
+
+  /* High DPI/Retina Displays */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .cursor-ring {
+      border-width: 0.5px;
+    }
+    .tech-orb {
+      border-width: 0.5px;
+    }
+    .project-card {
+      border-width: 0.5px;
+    }
+  }
+
+  /* Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
+    /* Already optimized for dark mode */
+  }
+
+  /* Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .cursor, .cursor-ring {
+      transition: none;
+    }
+  }
+
 </style>
 </head>
 <body>
