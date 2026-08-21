@@ -1,26 +1,75 @@
+/**
+ * Design tokens — single source of truth.
+ * Museum White (light) + Luxury AI Laboratory (dark).
+ * Components must consume these variables only — never hardcode hex.
+ */
+
 :root {
-  --bg: #ffffff;
-  --surface: #f5f5f7;
-  --text: #1d1d1f;
-  --muted: #6e6e73;
-  --faint: #86868b;
-  --line: rgba(0, 0, 0, 0.08);
-  --blue: #0071e3;
-  --blue-hover: #0077ed;
-  --glass: rgba(255, 255, 255, 0.72);
-  --glass-stroke: rgba(255, 255, 255, 0.55);
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 24px 80px rgba(0, 0, 0, 0.06);
-  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  /* Museum White — primary light */
+  --bg: #fafaf9;
+  --surface: #f5f3ef;
+  --surface-elevated: #ffffff;
+  --text: #1c1a22;
+  --muted: #9a968f;
+  --border: #e2deda;
+  --primary: #4b3f72;
+  --accent: #b99b5d;
+
+  /* Shared semantic aliases */
+  --ink: #1c1a22;
+  --paper: #fafaf9;
+  --violet: #4b3f72;
+  --gold: #b99b5d;
+
+  --glass: color-mix(in srgb, var(--surface-elevated) 62%, transparent);
+  --glass-border: color-mix(in srgb, var(--surface-elevated) 72%, transparent);
+  --shadow-soft: 0 20px 60px color-mix(in srgb, var(--ink) 6%, transparent);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration: 0.45s;
+
+  /* Type scale — 1.25 ratio */
+  --step-0: 0.75rem;
+  --step-1: 0.875rem;
+  --step-2: 1rem;
+  --step-3: 1.25rem;
+  --step-4: 1.5625rem;
+  --step-5: 1.9375rem;
+  --step-6: 2.4375rem;
+  --step-7: 3.0625rem;
+  --step-8: 3.8125rem;
+}
+
+[data-theme="dark"] {
+  /* Luxury AI Laboratory — dark */
+  --bg: #0e0d12;
+  --surface: #1c1a22;
+  --surface-elevated: #1c1a22;
+  --text: #edeae2;
+  --muted: #6e6a72;
+  --border: #332c47;
+  --primary: #4b3f72;
+  --accent: #b99b5d;
+  --ink: #edeae2;
+  --paper: #0e0d12;
+  --glass: color-mix(in srgb, var(--surface) 70%, transparent);
+  --glass-border: color-mix(in srgb, var(--border) 80%, transparent);
+  --shadow-soft: 0 20px 60px color-mix(in srgb, #000 40%, transparent);
 }
 
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
   --color-text: var(--text);
   --color-muted: var(--muted);
-  --color-faint: var(--faint);
-  --color-blue: var(--blue);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-violet: var(--violet);
+  --color-gold: var(--gold);
   --font-sans: var(--font-geist);
-  --font-display: var(--font-display);
   --font-mono: var(--font-mono);
 }

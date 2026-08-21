@@ -1,27 +1,27 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAllWork, getWorkBySlug } from "@/lib/content";
+import { getAllResearch, getResearchBySlug } from "@/lib/content";
 
 export function generateStaticParams() {
-  return getAllWork().map((item) => ({
+  return getAllResearch().map((item) => ({
     slug: item.slug.split("/").pop()!,
   }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const item = getWorkBySlug(slug);
+  const item = getResearchBySlug(slug);
   if (!item) return {};
   return { title: `${item.title} — Kevin Mevada`, description: item.summary };
 }
 
-export default async function WorkCaseStudyPage({
+export default async function ResearchCaseStudyPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const item = getWorkBySlug(slug);
+  const item = getResearchBySlug(slug);
   if (!item) notFound();
 
   return (
@@ -30,7 +30,7 @@ export default async function WorkCaseStudyPage({
         ← Foundation
       </Link>
       <p className="mt-8 font-[family-name:var(--font-mono)] text-[length:var(--step-0)] text-muted uppercase">
-        Work · MDX
+        Research · MDX
       </p>
       <h1 className="mt-2 text-[length:var(--step-6)] font-semibold tracking-tight text-text">
         {item.title}
