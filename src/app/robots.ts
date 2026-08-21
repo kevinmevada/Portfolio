@@ -1,8 +1,10 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://kevinmevada.vercel.app/sitemap.xml",
+    sitemap: "https://kevinmevada.github.io/Portfolio/sitemap.xml",
   };
 }

@@ -1,7 +1,18 @@
 import type { NextConfig } from "next";
 
+const repo = "Portfolio";
+const isGithubPages = process.env.GITHUB_PAGES === "true";
+
 const nextConfig: NextConfig = {
-  /* Phase 1 foundation — visual design arrives later */
+  output: "export",
+  images: { unoptimized: true },
+  trailingSlash: true,
+  ...(isGithubPages
+    ? {
+        basePath: `/${repo}`,
+        assetPrefix: `/${repo}/`,
+      }
+    : {}),
 };
 
 export default nextConfig;
